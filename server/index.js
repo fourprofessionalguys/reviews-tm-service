@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
 const faker = require('faker');
-const { getReview } = require('../database/index.js')
+//const { getReview } = require('../database/index.js')
 
 const environment = process.env.NODE_ENV || 'development';
 const configuration = require('../knexfile')[environment];
