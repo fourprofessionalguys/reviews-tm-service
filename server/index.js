@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/reviews', (req, res) => {
   console.log('request at server, heading to database');
-  database('reviews').limit(20).then((reviews) => {
+  database('reviews').limit(8).then((reviews) => {
   	res.status(200).send(reviews);
   });
 });
@@ -31,9 +31,6 @@ app.get('/review', (req, res) => {
   database('reviews').where({ username: faker.name.findName() }).limit(20).then((review) => {
   	res.status(200).send(review);
   });
-  // let review = getReview(faker.name.findName());
-  // console.log(review);
-  // res.status(200).send(review);
 
 
 });
